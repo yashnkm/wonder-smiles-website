@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import HomePage from '../pages/HomePage';
 import AboutPage from '../pages/AboutPage';
+import ServicesPage from '../pages/ServicesPage';
+import GalleryPage from '../pages/GalleryPage';
+import TestimonialsPage from '../pages/TestimonialsPage';
 
 const Router = () => {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -30,6 +33,12 @@ const Router = () => {
     switch (currentPath) {
       case '/about':
         return <AboutPage />;
+      case '/services':
+        return <ServicesPage />;
+      case '/gallery':
+        return <GalleryPage />;
+      case '/testimonials':
+        return <TestimonialsPage />;
       case '/':
       default:
         return <HomePage />;

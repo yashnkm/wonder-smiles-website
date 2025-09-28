@@ -36,6 +36,30 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Animation classes for Hero section */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
 /* Custom utility classes */
 .btn-primary {
   @apply inline-flex items-center justify-center px-6 py-3 text-sm font-bold text-white bg-dentelo-gradient rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105;

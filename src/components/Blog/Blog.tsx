@@ -4,13 +4,14 @@ interface BlogCardProps {
   image: string;
   date: string;
   readTime: string;
+  category: string;
 }
 
-const BlogCard = ({ title, excerpt, image, date, readTime }: BlogCardProps) => {
+const BlogCard = ({ title, excerpt, image, date, readTime, category }: BlogCardProps) => {
   return (
     <article className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
       <div className="relative overflow-hidden">
-        <img 
+        <img
           src={image}
           alt={title}
           className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
@@ -26,36 +27,27 @@ const BlogCard = ({ title, excerpt, image, date, readTime }: BlogCardProps) => {
         <div className="absolute top-4 right-4 bg-carolina-blue text-white px-3 py-1 rounded-full text-sm font-medium">
           {readTime}
         </div>
+        <div className="absolute bottom-4 left-4 bg-royal-blue-light text-white px-3 py-1 rounded-full text-sm font-medium">
+          {category}
+        </div>
       </div>
-      
+
       <div className="p-6">
         <h3 className="font-montserrat font-bold text-xl text-oxford-blue-1 mb-3 line-clamp-2 group-hover:text-carolina-blue transition-colors duration-200">
-          <a href="#" className="hover:text-carolina-blue transition-colors duration-200">
-            {title}
-          </a>
+          {title}
         </h3>
-        
+
         <p className="text-sonic-silver leading-relaxed mb-4 line-clamp-3">
           {excerpt}
         </p>
-        
+
         <div className="flex items-center justify-between">
-          <a 
-            href="#" 
-            className="text-carolina-blue font-medium hover:text-royal-blue-light transition-colors duration-200 flex items-center gap-2"
-          >
-            Read More
-            <svg className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
-          
-          <div className="flex items-center gap-2 text-sm text-sonic-silver">
+          <div className="text-carolina-blue font-medium flex items-center gap-2">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
             </svg>
-            <span>245</span>
+            <span className="text-sm text-sonic-silver">Wonder Smiles Insights</span>
           </div>
         </div>
       </div>
@@ -66,34 +58,21 @@ const BlogCard = ({ title, excerpt, image, date, readTime }: BlogCardProps) => {
 const Blog = () => {
   const blogPosts = [
     {
-      title: "Complete Guide to Dental Hygiene: Best Practices for Healthy Teeth",
-      excerpt: "Discover essential daily habits and professional tips to maintain optimal oral health. Learn about proper brushing techniques, flossing methods, and preventive care strategies that will keep your smile bright and healthy for years to come.",
-      image: "./assets/images/blog-1.jpg",
-      date: "Mar 24, 2024",
-      readTime: "5 min read"
+      title: "Why Choose Wonder Smiles for Your Child's First Dental Visit in Bavdhan",
+      excerpt: "At Wonder Smiles Kids & Family Dental Clinic in Bavdhan, Dr. Chandrama Patil specializes in making children's first dental experiences positive and stress-free. Learn why parents across Pune trust our gentle approach, state-of-the-art equipment, and child-friendly environment for their family's dental care needs.",
+      image: "./assests/gallery/DSC02930.webp",
+      date: "Dec 15, 2024",
+      readTime: "4 min read",
+      category: "Pediatric Care"
     },
     {
-      title: "Understanding Root Canal Treatment: What to Expect During the Procedure",
-      excerpt: "Demystify root canal treatment with our comprehensive guide. Learn about the process, pain management, recovery tips, and why this procedure is often the best way to save your natural tooth and maintain your smile.",
-      image: "./assets/images/blog-2.jpg",
-      date: "Mar 20, 2024",
-      readTime: "7 min read"
-    },
-    {
-      title: "Modern Orthodontics: Invisible Aligners vs Traditional Braces Comparison",
-      excerpt: "Explore the latest orthodontic options available today. Compare the benefits, costs, and treatment timelines of clear aligners versus traditional braces to make an informed decision about straightening your teeth.",
-      image: "./assets/images/blog-3.jpg",
-      date: "Mar 18, 2024",
-      readTime: "6 min read"
+      title: "Advanced Dental Technology at Wonder Smiles: Modern Care in Bavdhan, Pune",
+      excerpt: "Discover how Wonder Smiles Dental Clinic combines cutting-edge dental technology with compassionate care. From digital X-rays to modern sterilization systems, learn about the advanced equipment that makes our Bavdhan clinic a leader in dental care for families in Pune and surrounding areas.",
+      image: "./assests/gallery/DSC02683.jpg",
+      date: "Dec 10, 2024",
+      readTime: "5 min read",
+      category: "Technology"
     }
-  ];
-
-  const categories = [
-    { name: "Preventive Care", count: 12 },
-    { name: "Cosmetic Dentistry", count: 8 },
-    { name: "Orthodontics", count: 6 },
-    { name: "Oral Surgery", count: 4 },
-    { name: "Pediatric Dentistry", count: 7 }
   ];
 
   return (
@@ -102,122 +81,43 @@ const Blog = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <p className="text-carolina-blue font-lato font-medium text-lg mb-2">
-            Our Blog
+            Dental Health Insights
           </p>
           <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-oxford-blue-1 mb-4">
-            Latest Blog & News
+            Latest from Wonder Smiles
           </h2>
           <div className="w-20 h-1 bg-carolina-blue mx-auto rounded-full mb-6"></div>
           <p className="text-sonic-silver max-w-2xl mx-auto leading-relaxed">
-            Stay informed about the latest developments in dental care, oral health tips, 
-            and insights from our experienced dental professionals.
+            Expert dental care insights and updates from Dr. Chandrama Patil and the Wonder Smiles team in Bavdhan, Pune.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-4 gap-8">
-          {/* Blog Posts */}
-          <div className="lg:col-span-3">
-            <div className="grid md:grid-cols-2 xl:grid-cols-1 gap-8">
-              {blogPosts.map((post, index) => (
-                <BlogCard key={index} {...post} />
-              ))}
-            </div>
-            
-            {/* Load More Button */}
-            <div className="text-center mt-12">
-              <a href="#" className="btn-primary">
-                Load More Articles
+        {/* Blog Posts - Clean 2-column layout */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {blogPosts.map((post, index) => (
+            <BlogCard key={index} {...post} />
+          ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-12">
+          <div className="bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto">
+            <h3 className="font-montserrat font-bold text-2xl text-oxford-blue-1 mb-4">
+              Ready to Experience Wonder Smiles Care?
+            </h3>
+            <p className="text-sonic-silver mb-6">
+              Book your appointment today and discover why families in Bavdhan choose Wonder Smiles for their dental care needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="#appointment" className="btn-primary">
+                Book Appointment
               </a>
-            </div>
-          </div>
-
-          {/* Sidebar */}
-          <div className="lg:col-span-1 space-y-8">
-            {/* Search */}
-            <div className="bg-white rounded-lg p-6 shadow-lg">
-              <h3 className="font-montserrat font-bold text-oxford-blue-1 mb-4">Search Articles</h3>
-              <div className="relative">
-                <input 
-                  type="search" 
-                  placeholder="Search blog posts..."
-                  className="w-full pl-10 pr-4 py-3 border border-light-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-carolina-blue focus:border-transparent"
-                />
-                <svg className="absolute left-3 top-3.5 w-5 h-5 text-sonic-silver" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </div>
-            </div>
-
-            {/* Categories */}
-            <div className="bg-white rounded-lg p-6 shadow-lg">
-              <h3 className="font-montserrat font-bold text-oxford-blue-1 mb-4">Categories</h3>
-              <ul className="space-y-3">
-                {categories.map((category, index) => (
-                  <li key={index}>
-                    <a 
-                      href="#" 
-                      className="flex items-center justify-between text-sonic-silver hover:text-carolina-blue transition-colors duration-200"
-                    >
-                      <span>{category.name}</span>
-                      <span className="bg-cultured text-oxford-blue-1 px-2 py-1 rounded-full text-sm font-medium">
-                        {category.count}
-                      </span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Newsletter */}
-            <div className="bg-dentelo-gradient rounded-lg p-6 text-white">
-              <h3 className="font-montserrat font-bold text-white mb-3">Stay Updated</h3>
-              <p className="text-white/90 mb-4 text-sm">
-                Subscribe to our newsletter for the latest dental health tips and updates.
-              </p>
-              <form className="space-y-3">
-                <input 
-                  type="email" 
-                  placeholder="Your email address"
-                  required
-                  className="w-full px-3 py-2 rounded-lg text-oxford-blue-1 focus:outline-none focus:ring-2 focus:ring-white"
-                />
-                <button type="submit" className="w-full bg-white text-carolina-blue font-bold py-2 px-4 rounded-lg hover:bg-gray-100 transition-colors duration-200">
-                  Subscribe
-                </button>
-              </form>
-            </div>
-
-            {/* Popular Posts */}
-            <div className="bg-white rounded-lg p-6 shadow-lg">
-              <h3 className="font-montserrat font-bold text-oxford-blue-1 mb-4">Popular Posts</h3>
-              <div className="space-y-4">
-                <article className="flex gap-3">
-                  <img 
-                    src="./assets/images/blog-1.jpg" 
-                    alt="Popular post"
-                    className="w-16 h-16 object-cover rounded-lg flex-shrink-0"
-                  />
-                  <div>
-                    <h4 className="font-medium text-oxford-blue-1 text-sm mb-1 line-clamp-2">
-                      <a href="#" className="hover:text-carolina-blue transition-colors">Essential Dental Care Tips</a>
-                    </h4>
-                    <p className="text-sonic-silver text-xs">Mar 15, 2024</p>
-                  </div>
-                </article>
-                <article className="flex gap-3">
-                  <img 
-                    src="./assets/images/blog-2.jpg" 
-                    alt="Popular post"
-                    className="w-16 h-16 object-cover rounded-lg flex-shrink-0"
-                  />
-                  <div>
-                    <h4 className="font-medium text-oxford-blue-1 text-sm mb-1 line-clamp-2">
-                      <a href="#" className="hover:text-carolina-blue transition-colors">Modern Orthodontic Solutions</a>
-                    </h4>
-                    <p className="text-sonic-silver text-xs">Mar 12, 2024</p>
-                  </div>
-                </article>
-              </div>
+              <a
+                href="tel:+917052101786"
+                className="border border-carolina-blue text-carolina-blue hover:bg-carolina-blue hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+              >
+                Call: +91 70521 01786
+              </a>
             </div>
           </div>
         </div>

@@ -24,8 +24,8 @@ const About = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.5a2.5 2.5 0 110 5H9z" />
         </svg>
       ),
-      title: "Anxiety Management",
-      description: "Patient-centered approach for anxious and scared patients"
+      title: "Behavioral Management",
+      description: "Expert techniques to help children feel comfortable during dental visits"
     }
   ];
 
@@ -36,8 +36,8 @@ const About = () => {
           {/* About Banner */}
           <div className="relative">
             <div className="relative z-10">
-              <img 
-                src="./assests/dr-chandrama-patil.jpeg" 
+              <img
+                src="./assests/dr-chandrama-patil.jpeg"
                 alt="Dr. Chandrama Patil - Pediatric Dentist"
                 className="w-full h-auto rounded-lg shadow-xl"
                 width="470"

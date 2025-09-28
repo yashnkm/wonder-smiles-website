@@ -10,7 +10,7 @@ const AboutPage = () => {
       <section 
         className="relative py-24 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "linear-gradient(rgba(33, 45, 69, 0.8), rgba(33, 45, 69, 0.8)), url('./assests/clinic-with-children.jpeg')"
+          backgroundImage: "linear-gradient(rgba(33, 45, 69, 0.8), rgba(33, 45, 69, 0.8)), url('./assests/gallery-clinic-space/2.webp')"
         }}
       >
         <div className="container-custom text-center text-white">
@@ -70,9 +70,9 @@ const AboutPage = () => {
 
             {/* Right Image */}
             <div className="relative">
-              <img 
-                src="./assests/dental-procedures.jpeg" 
-                alt="Dental Care Excellence"
+              <img
+                src="./assests/gallery/DSC02870.webp"
+                alt="Dr. Chandrama Patil providing dental treatment"
                 className="w-full h-auto rounded-lg shadow-xl"
               />
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-carolina-blue/10 rounded-full -z-10"></div>
@@ -104,9 +104,9 @@ const AboutPage = () => {
                 </p>
 
                 <p className="text-sonic-silver leading-relaxed">
-                  Dr. Patil's expertise extends beyond routine dental procedures. She is particularly 
-                  adept at managing extremely anxious and scared patients, creating a calm and comforting 
-                  environment that helps them feel at ease.
+                  Dr. Patil's expertise extends beyond routine dental procedures. She is particularly
+                  skilled in behavioral management techniques, creating a calm and comforting
+                  environment that helps anxious and scared patients feel at ease during their visits.
                 </p>
               </div>
 
@@ -118,7 +118,7 @@ const AboutPage = () => {
                     <svg className="w-4 h-4 text-carolina-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    BDS from Nair Hospital Dental College, Mumbai
+                    MDS from Nair Hospital Dental College, Mumbai
                   </li>
                   <li className="flex items-center gap-2">
                     <svg className="w-4 h-4 text-carolina-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -138,17 +138,13 @@ const AboutPage = () => {
 
             {/* Right Image */}
             <div className="relative">
-              <div className="bg-white p-8 rounded-lg shadow-xl text-center">
-                <img 
-                  src="./assests/dr-chandrama-patil.jpeg" 
-                  alt="Dr. Chandrama Patil - Pediatric Dentist"
-                  className="w-64 h-64 object-cover rounded-lg mx-auto mb-4"
-                />
-                <h3 className="font-montserrat font-bold text-xl text-oxford-blue-1 mb-2">
-                  Dr. Chandrama Patil
-                </h3>
-                <p className="text-carolina-blue font-medium">BDS, Pediatric Dentist</p>
-              </div>
+              <img
+                src="./assests/DSC02681.webp"
+                alt="Dr. Chandrama Patil - Pediatric Dentist"
+                className="w-full h-auto rounded-lg shadow-xl"
+              />
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-carolina-blue/10 rounded-full -z-10"></div>
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-royal-blue-light/10 rounded-full -z-10"></div>
             </div>
           </div>
         </div>
@@ -202,9 +198,9 @@ const AboutPage = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Image */}
             <div className="relative">
-              <img 
-                src="./assests/before-after-treatment.jpeg" 
-                alt="Advanced Dental Care"
+              <img
+                src="./assests/gallery-clinic-space/3.webp"
+                alt="Wonder Smiles Modern Clinic Interior"
                 className="w-full h-auto rounded-lg shadow-xl"
               />
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-carolina-blue/10 rounded-full -z-10"></div>
@@ -305,15 +301,15 @@ const AboutPage = () => {
             {/* Happy Patients */}
             <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="text-4xl md:text-5xl font-montserrat font-bold text-carolina-blue mb-2">
-                1,485 <span className="text-2xl">+</span>
+                100 <span className="text-2xl">+</span>
               </div>
-              <div className="text-oxford-blue-1 font-medium">Happy Patients</div>
+              <div className="text-oxford-blue-1 font-medium">Happy Smiles</div>
             </div>
 
             {/* Satisfaction Rate */}
             <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="text-4xl md:text-5xl font-montserrat font-bold text-carolina-blue mb-2">
-                74 <span className="text-2xl">%</span>
+                100 <span className="text-2xl">%</span>
               </div>
               <div className="text-oxford-blue-1 font-medium">Satisfaction Rate</div>
             </div>

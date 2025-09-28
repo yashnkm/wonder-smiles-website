@@ -43,7 +43,9 @@ const Appointment = () => {
     // Add all days of the month
     for (let day = 1; day <= daysInMonth; day++) {
       const date = new Date(year, month, day);
-      const isPast = date < today.setHours(0, 0, 0, 0);
+      const todayStart = new Date(today);
+      todayStart.setHours(0, 0, 0, 0);
+      const isPast = date < todayStart;
       const isToday = date.toDateString() === today.toDateString();
       
       calendarDays.push({

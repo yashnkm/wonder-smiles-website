@@ -51,35 +51,40 @@ const Header = () => {
               >
                 Home
               </button>
-              <a 
-                href="#service" 
+              <button
+                onClick={() => handleNavigation('/services')}
                 className="text-oxford-blue-1 hover:text-carolina-blue font-medium transition-colors duration-200"
               >
                 Services
-              </a>
+              </button>
               <button 
                 onClick={() => handleNavigation('/about')}
                 className="text-oxford-blue-1 hover:text-carolina-blue font-medium transition-colors duration-200"
               >
                 About Us
               </button>
-              <a 
-                href="#testimonials" 
+              <button
+                onClick={() => handleNavigation('/testimonials')}
                 className="text-oxford-blue-1 hover:text-carolina-blue font-medium transition-colors duration-200"
               >
                 Testimonials
-              </a>
-              <a 
-                href="#contact" 
+              </button>
+              <button
+                onClick={() => handleNavigation('/gallery')}
                 className="text-oxford-blue-1 hover:text-carolina-blue font-medium transition-colors duration-200"
               >
-                Contact
-              </a>
+                Gallery
+              </button>
             </nav>
 
             {/* CTA Button */}
             <div className="hidden lg:flex items-center">
-              <a href="#" className="btn-primary">
+              <a
+                href="https://wa.me/917052101786?text=Hi%20Wonder%20Smiles,%20I%20would%20like%20to%20book%20an%20appointment"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
                 Book Appointment
               </a>
             </div>
@@ -126,34 +131,36 @@ const Header = () => {
                   >
                     Home
                   </button>
-                  <a 
-                    href="#service" 
-                    className="text-oxford-blue-1 hover:text-carolina-blue font-medium transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
+                  <button
+                    onClick={() => handleNavigation('/services')}
+                    className="text-oxford-blue-1 hover:text-carolina-blue font-medium transition-colors text-left"
                   >
                     Services
-                  </a>
+                  </button>
                   <button 
                     onClick={() => handleNavigation('/about')}
                     className="text-oxford-blue-1 hover:text-carolina-blue font-medium transition-colors text-left"
                   >
                     About Us
                   </button>
-                  <a 
-                    href="#testimonials" 
-                    className="text-oxford-blue-1 hover:text-carolina-blue font-medium transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
+                  <button
+                    onClick={() => handleNavigation('/testimonials')}
+                    className="text-oxford-blue-1 hover:text-carolina-blue font-medium transition-colors text-left"
                   >
                     Testimonials
-                  </a>
-                  <a 
-                    href="#contact" 
-                    className="text-oxford-blue-1 hover:text-carolina-blue font-medium transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
+                  </button>
+                  <button
+                    onClick={() => handleNavigation('/gallery')}
+                    className="text-oxford-blue-1 hover:text-carolina-blue font-medium transition-colors text-left"
                   >
-                    Contact
-                  </a>
-                  <a href="#" className="btn-primary w-fit">
+                    Gallery
+                  </button>
+                  <a
+                    href="https://wa.me/917052101786?text=Hi%20Wonder%20Smiles,%20I%20would%20like%20to%20book%20an%20appointment"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary w-fit"
+                  >
                     Book Appointment
                   </a>
                 </nav>

@@ -22,7 +22,7 @@ const WhyChooseUs = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-montserrat font-bold text-oxford-blue-1 leading-tight mb-6">
-                Why Choose Dr. Chandrama Patil for Your Child's Dental Care?
+                Why Choose Wonder Smiles for Your Child's Dental Care?
               </h2>
             </div>
             
@@ -43,10 +43,10 @@ const WhyChooseUs = () => {
           {/* Image Section */}
           <div className="relative">
             <div className="relative z-10">
-              <img 
-                src="./assests/dr-chandrama-patil.jpeg" 
-                alt="Dr. Chandrama Patil - Pediatric Dentist"
-                className="w-full h-auto rounded-lg shadow-xl"
+              <img
+                src="./assests/doctor-with-children.jpg"
+                alt="Wonder Smiles - Friendly Pediatric Dental Care"
+                className="w-full h-auto rounded-lg shadow-xl object-cover"
                 width="600"
                 height="400"
               />
