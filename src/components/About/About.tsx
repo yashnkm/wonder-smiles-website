@@ -37,7 +37,7 @@ const About = () => {
           <div className="relative">
             <div className="relative z-10">
               <img
-                src="./assests/dr-chandrama-patil.jpeg"
+                src="/assests/dr-chandrama-patil.jpeg"
                 alt="Dr. Chandrama Patil - Pediatric Dentist"
                 className="w-full h-auto rounded-lg shadow-xl"
                 width="470"

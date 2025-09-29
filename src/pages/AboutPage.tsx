@@ -71,7 +71,7 @@ const AboutPage = () => {
             {/* Right Image */}
             <div className="relative">
               <img
-                src="./assests/gallery/DSC02870.webp"
+                src="/assests/gallery/DSC02870.webp"
                 alt="Dr. Chandrama Patil providing dental treatment"
                 className="w-full h-auto rounded-lg shadow-xl"
               />
@@ -139,7 +139,7 @@ const AboutPage = () => {
             {/* Right Image */}
             <div className="relative">
               <img
-                src="./assests/DSC02681.webp"
+                src="/assests/DSC02681.webp"
                 alt="Dr. Chandrama Patil - Pediatric Dentist"
                 className="w-full h-auto rounded-lg shadow-xl"
               />
@@ -199,7 +199,7 @@ const AboutPage = () => {
             {/* Left Image */}
             <div className="relative">
               <img
-                src="./assests/gallery-clinic-space/3.webp"
+                src="/assests/gallery-clinic-space/3.webp"
                 alt="Wonder Smiles Modern Clinic Interior"
                 className="w-full h-auto rounded-lg shadow-xl"
               />

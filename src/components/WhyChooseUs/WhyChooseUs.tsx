@@ -44,7 +44,7 @@ const WhyChooseUs = () => {
           <div className="relative">
             <div className="relative z-10">
               <img
-                src="./assests/doctor-with-children.jpg"
+                src="/assests/doctor-with-children.jpg"
                 alt="Wonder Smiles - Friendly Pediatric Dental Care"
                 className="w-full h-auto rounded-lg shadow-xl object-cover"
                 width="600"

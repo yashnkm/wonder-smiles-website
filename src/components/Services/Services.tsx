@@ -104,7 +104,7 @@ const Services = () => {
             <div className="flex items-center justify-center">
               <div className="relative group">
                 <img 
-                  src="./assets/images/service-banner.png" 
+                  src="/assets/images/service-banner.png" 
                   alt="Professional dental services"
                   className="w-full h-auto max-w-sm rounded-lg shadow-lg"
                   width="409"
@@ -137,7 +137,7 @@ const Services = () => {
             <div className="flex justify-center">
               <div className="relative group max-w-sm">
                 <img 
-                  src="./assets/images/service-banner.png" 
+                  src="/assets/images/service-banner.png" 
                   alt="Professional dental services"
                   className="w-full h-auto rounded-lg shadow-lg"
                   width="409"

@@ -118,7 +118,7 @@ const Appointment = () => {
               <div className="flex items-center gap-4 mb-8">
                 <div className="relative">
                   <img 
-                    src="./assests/dr-chandrama-patil.jpeg" 
+                    src="/assests/dr-chandrama-patil.jpeg" 
                     alt="Dr. Chandrama Patil"
                     className="w-16 h-16 rounded-full object-cover border-4 border-white shadow-lg"
                   />

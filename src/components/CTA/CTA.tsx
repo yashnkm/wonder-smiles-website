@@ -7,7 +7,7 @@ const CTA = () => {
           <div className="relative order-2 lg:order-1">
             <div className="relative z-10">
               <img 
-                src="./assests/before-after-treatment.jpeg" 
+                src="/assests/before-after-treatment.jpeg" 
                 alt="Before and after dental treatment results"
                 className="w-full h-auto rounded-lg shadow-xl"
                 width="1056"
