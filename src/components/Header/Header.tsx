@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, memo } from 'react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -173,4 +173,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);

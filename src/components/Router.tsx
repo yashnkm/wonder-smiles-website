@@ -1,9 +1,11 @@
-import { useState, useEffect } from 'react';
-import HomePage from '../pages/HomePage';
-import AboutPage from '../pages/AboutPage';
-import ServicesPage from '../pages/ServicesPage';
-import GalleryPage from '../pages/GalleryPage';
-import TestimonialsPage from '../pages/TestimonialsPage';
+import { useState, useEffect, Suspense, lazy } from 'react';
+
+// Lazy load pages for code splitting
+const HomePage = lazy(() => import('../pages/HomePage'));
+const AboutPage = lazy(() => import('../pages/AboutPage'));
+const ServicesPage = lazy(() => import('../pages/ServicesPage'));
+const GalleryPage = lazy(() => import('../pages/GalleryPage'));
+const TestimonialsPage = lazy(() => import('../pages/TestimonialsPage'));
 
 const Router = () => {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -45,7 +47,18 @@ const Router = () => {
     }
   };
 
-  return renderPage();
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50/30 to-white">
+        <div className="text-center">
+          <div className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-gray-600 font-medium">Loading...</p>
+        </div>
+      </div>
+    }>
+      {renderPage()}
+    </Suspense>
+  );
 };
 
 export default Router;

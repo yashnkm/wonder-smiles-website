@@ -82,6 +82,8 @@ const Hero = () => {
                   className="w-full h-auto rounded-2xl shadow-2xl lg:max-w-lg xl:max-w-xl mx-auto"
                   src="/assests/doctor-hero.jpg"
                   alt="Dr. Chandrama Patil - Expert Dentist at Wonder Smiles"
+                  loading="eager"
+                  fetchPriority="high"
                 />
 
                 {/* Floating card - adjusted position */}

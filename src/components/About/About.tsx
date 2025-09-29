@@ -42,6 +42,7 @@ const About = () => {
                 className="w-full h-auto rounded-lg shadow-xl"
                 width="470"
                 height="538"
+                loading="lazy"
               />
             </div>
             
