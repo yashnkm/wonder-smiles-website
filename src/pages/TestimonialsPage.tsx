@@ -12,7 +12,7 @@ const TestimonialsPage = () => {
       review: "Found this relatively new clinic in Bavdhan and it's a true gem. The staff is perfect—they manage appointments well and even call to check in after treatment. The dentists are amazing, kind, and treat you with so much care.",
       verified: true,
       category: "General Care",
-      bgImage: "/assests/gallery/DSC02652.jpg"
+      bgImage: "/assests/gallery/DSC02652.webp"
     },
     {
       id: 2,
@@ -22,7 +22,7 @@ const TestimonialsPage = () => {
       review: "Absolutely the best dental experience I've ever had! Dr. Chandrama explained everything in detail and made me feel super comfortable. The clinic is modern, clean, and welcoming. Highly recommend Wonder Smiles!",
       verified: true,
       category: "Patient Experience",
-      bgImage: "/assests/gallery/DSC02870.jpg"
+      bgImage: "/assests/gallery/DSC02870.webp"
     },
     {
       id: 3,
@@ -54,7 +54,7 @@ const TestimonialsPage = () => {
       verified: true,
       hasResponse: true,
       category: "Professional Care",
-      bgImage: "/assests/gallery/DSC02777.jpg"
+      bgImage: "/assests/gallery/DSC02777.webp"
     },
     {
       id: 6,
@@ -65,7 +65,7 @@ const TestimonialsPage = () => {
       verified: true,
       hasResponse: true,
       category: "Education & Prevention",
-      bgImage: "/assests/gallery/DSC02873.jpg"
+      bgImage: "/assests/gallery/DSC02873.webp"
     },
     {
       id: 7,
@@ -75,7 +75,7 @@ const TestimonialsPage = () => {
       review: "Five stars for professionalism and hygiene! The staff wear proper PPE, sanitize after every patient, and make you feel safe. My kids also loved the pediatric dentist here.",
       verified: true,
       category: "Hygiene & Safety",
-      bgImage: "/assests/gallery/DSC02930.jpg"
+      bgImage: "/assests/gallery/DSC02930.webp"
     },
     {
       id: 8,
@@ -86,7 +86,7 @@ const TestimonialsPage = () => {
       verified: true,
       hasResponse: true,
       category: "Pediatric Care",
-      bgImage: "/assests/gallery/DSC02930.jpg"
+      bgImage: "/assests/gallery/DSC02930.webp"
     },
     {
       id: 9,
@@ -97,7 +97,7 @@ const TestimonialsPage = () => {
       verified: true,
       hasResponse: true,
       category: "Punctuality",
-      bgImage: "/assests/gallery/DSC02876.jpg"
+      bgImage: "/assests/gallery/DSC02876.webp"
     },
     {
       id: 10,
@@ -109,7 +109,7 @@ const TestimonialsPage = () => {
       localGuide: true,
       hasResponse: true,
       category: "Pediatric Specialist",
-      bgImage: "/assests/gallery/DSC02930.jpg"
+      bgImage: "/assests/gallery/DSC02930.webp"
     },
     {
       id: 11,
@@ -119,7 +119,7 @@ const TestimonialsPage = () => {
       review: "Excellent, knowledgeable, well-trained, and empathetic. Dr. Chandrama is an outstanding dentist. My daughter was very comfortable during the treatment, as the doctor patiently explained everything and handled her with great care.",
       verified: true,
       category: "Expertise",
-      bgImage: "/assests/gallery/DSC02904.jpg"
+      bgImage: "/assests/gallery/DSC02904.webp"
     },
     {
       id: 12,
@@ -130,7 +130,7 @@ const TestimonialsPage = () => {
       verified: true,
       hasResponse: true,
       category: "Family Care",
-      bgImage: "/assests/gallery/DSC02881.jpg"
+      bgImage: "/assests/gallery/DSC02881.webp"
     },
     {
       id: 13,
@@ -140,7 +140,7 @@ const TestimonialsPage = () => {
       review: "My nephew was always terrified of the dentist until we met Dr. Chandrama. Her caring approach changed a scared little one into a smiling patient.",
       verified: true,
       category: "Anxiety Management",
-      bgImage: "/assests/gallery/DSC02930.jpg"
+      bgImage: "/assests/gallery/DSC02930.webp"
     },
     {
       id: 14,
@@ -150,7 +150,7 @@ const TestimonialsPage = () => {
       review: "What a great experience! Dr. Chandrama is gentle, professional, and really takes the time to listen. Highly recommend!",
       verified: true,
       category: "Communication",
-      bgImage: "/assests/gallery/DSC02907.jpg"
+      bgImage: "/assests/gallery/DSC02907.webp"
     },
     {
       id: 15,
@@ -160,7 +160,7 @@ const TestimonialsPage = () => {
       review: "I had a wonderful experience, Dr. Chandrama is incredibly skilled, professional, and genuinely cares about the comfort and well-being of their patients. Thank you.",
       verified: true,
       category: "Patient Comfort",
-      bgImage: "/assests/gallery/DSC02956.jpg"
+      bgImage: "/assests/gallery/DSC02956.webp"
     }
   ];
 
@@ -216,7 +216,7 @@ const TestimonialsPage = () => {
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="absolute inset-0">
             <img
-              src="/assests/gallery/DSC02930.jpg"
+              src="/assests/gallery/DSC02930.webp"
               alt="Happy Patients at Wonder Smiles"
               className="w-full h-full object-cover opacity-25"
             />

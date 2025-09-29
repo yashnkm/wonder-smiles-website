@@ -60,7 +60,7 @@ const Blog = () => {
     {
       title: "Why Choose Wonder Smiles for Your Child's First Dental Visit in Bavdhan",
       excerpt: "At Wonder Smiles Kids & Family Dental Clinic in Bavdhan, Dr. Chandrama Patil specializes in making children's first dental experiences positive and stress-free. Learn why parents across Pune trust our gentle approach, state-of-the-art equipment, and child-friendly environment for their family's dental care needs.",
-      image: "./assests/gallery/DSC02930.webp",
+      image: "/assests/gallery/DSC02930.webp",
       date: "Dec 15, 2024",
       readTime: "4 min read",
       category: "Pediatric Care"
@@ -68,7 +68,7 @@ const Blog = () => {
     {
       title: "Advanced Dental Technology at Wonder Smiles: Modern Care in Bavdhan, Pune",
       excerpt: "Discover how Wonder Smiles Dental Clinic combines cutting-edge dental technology with compassionate care. From digital X-rays to modern sterilization systems, learn about the advanced equipment that makes our Bavdhan clinic a leader in dental care for families in Pune and surrounding areas.",
-      image: "./assests/gallery/DSC02683.jpg",
+      image: "/assests/gallery/DSC02683.jpg",
       date: "Dec 10, 2024",
       readTime: "5 min read",
       category: "Technology"
