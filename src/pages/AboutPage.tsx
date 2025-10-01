@@ -130,7 +130,7 @@ const AboutPage = () => {
                     <svg className="w-4 h-4 text-carolina-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    15+ Years of Clinical Experience
+                    5+ Years of Clinical Experience
                   </li>
                 </ul>
               </div>
@@ -265,8 +265,9 @@ const AboutPage = () => {
                       Comfort & Convenience
                     </h4>
                     <p className="text-sonic-silver">
-                      Our clinic is designed with patient comfort in mind, featuring a welcoming atmosphere 
-                      that helps reduce anxiety and create positive dental experiences.
+                      Our clinic is designed with patient comfort in mind, featuring a welcoming atmosphere
+                      with a child-friendly setup including toys and entertainment that helps reduce anxiety
+                      and create positive dental experiences for patients of all ages.
                     </p>
                   </div>
                 </div>
@@ -317,7 +318,7 @@ const AboutPage = () => {
             {/* Years of Experience */}
             <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="text-4xl md:text-5xl font-montserrat font-bold text-carolina-blue mb-2">
-                3 <span className="text-2xl">+</span>
+                5 <span className="text-2xl">+</span>
               </div>
               <div className="text-oxford-blue-1 font-medium">Years of Trusted Dental Experience</div>
             </div>
