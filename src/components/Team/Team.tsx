@@ -78,7 +78,7 @@ const Team = () => {
     {
       name: "Dr. Chandrama Patil",
       specialty: "Pediatric & General Dentist",
-      image: "./assests/dr-chandrama-patil.jpeg",
+      image: "./assests/dr-chandrama-patil.webp",
       socialLinks: {
         facebook: "#",
         twitter: "#",

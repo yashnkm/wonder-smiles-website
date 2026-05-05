@@ -7,7 +7,7 @@ const CTA = () => {
           <div className="relative order-2 lg:order-1">
             <div className="relative z-10">
               <img 
-                src="/assests/before-after-treatment.jpeg" 
+                src="/assests/before-after-treatment.webp" 
                 alt="Before and after dental treatment results"
                 className="w-full h-auto rounded-lg shadow-xl"
                 width="1056"
@@ -90,7 +90,7 @@ const CTA = () => {
                 Book Appointment
               </a>
               <a 
-                href="tel:+917052101786" 
+                href="tel:+919270418061" 
                 className="btn-secondary flex items-center justify-center gap-2"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -111,9 +111,13 @@ const CTA = () => {
                 <div>
                   <h4 className="font-semibold text-red-800 mb-1">Dental Emergency?</h4>
                   <p className="text-red-700 text-sm">
-                    Call our 24/7 emergency hotline: 
-                    <a href="tel:+917052101786" className="font-semibold hover:underline">
-                      +91-7052-101-786
+                    Call our 24/7 emergency hotline:{' '}
+                    <a href="tel:+919270418061" className="font-semibold hover:underline">
+                      +91-92704-18061
+                    </a>
+                    {' '}or{' '}
+                    <a href="tel:+917822030343" className="font-semibold hover:underline">
+                      +91-78220-30343
                     </a>
                   </p>
                 </div>

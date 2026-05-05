@@ -33,42 +33,42 @@ const ServiceCard = ({ icon, title, description }: ServiceCardProps) => {
 const Services = () => {
   const services = [
     {
-      icon: './assets/images/service-icon-1.png',
+      icon: './assets/images/service-icon-1.webp',
       title: 'Pediatric Check-ups',
       description: 'Regular examinations and professional cleanings for children to maintain good oral hygiene and prevent cavities.'
     },
     {
-      icon: './assets/images/service-icon-2.png',
+      icon: './assets/images/service-icon-2.webp',
       title: 'Preventive Care',
       description: 'Fluoride treatments and sealants to strengthen tooth enamel and protect against decay in children.'
     },
     {
-      icon: './assets/images/service-icon-3.png',
+      icon: './assets/images/service-icon-3.webp',
       title: 'Restorative Treatments',
       description: 'Fillings, crowns, and space maintainers to treat and restore damaged or decayed teeth in children.'
     },
     {
-      icon: './assets/images/service-icon-4.png',
+      icon: './assets/images/service-icon-4.webp',
       title: 'Special Needs Care',
       description: 'Specialized dental care tailored for children with various physical, developmental, or cognitive conditions.'
     },
     {
-      icon: './assets/images/service-icon-5.png',
+      icon: './assets/images/service-icon-5.webp',
       title: 'Behavior Management',
       description: 'Compassionate techniques to help anxious or fearful children feel comfortable during treatment.'
     },
     {
-      icon: './assets/images/service-icon-6.png',
+      icon: './assets/images/service-icon-6.webp',
       title: 'General Dentistry',
       description: 'Comprehensive dental services for all ages including cosmetic dentistry, extractions, and root canal treatment.'
     },
     {
-      icon: './assets/images/service-icon-1.png',
+      icon: './assets/images/service-icon-1.webp',
       title: 'Emergency Care',
       description: 'Prompt treatment for dental injuries, sports trauma, fractured teeth, and other urgent dental issues.'
     },
     {
-      icon: './assets/images/service-icon-2.png',
+      icon: './assets/images/service-icon-2.webp',
       title: 'Gum Disease Treatment',
       description: 'Scaling, root planing, and other procedures to treat and manage gingivitis and periodontitis.'
     }
@@ -104,7 +104,7 @@ const Services = () => {
             <div className="flex items-center justify-center">
               <div className="relative group">
                 <img 
-                  src="/assets/images/service-banner.png" 
+                  src="/assets/images/service-banner.webp" 
                   alt="Professional dental services"
                   className="w-full h-auto max-w-sm rounded-lg shadow-lg"
                   width="409"
@@ -137,7 +137,7 @@ const Services = () => {
             <div className="flex justify-center">
               <div className="relative group max-w-sm">
                 <img 
-                  src="/assets/images/service-banner.png" 
+                  src="/assets/images/service-banner.webp" 
                   alt="Professional dental services"
                   className="w-full h-auto rounded-lg shadow-lg"
                   width="409"

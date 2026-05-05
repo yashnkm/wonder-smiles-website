@@ -103,12 +103,18 @@ const Footer = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                   </div>
-                  <div>
-                    <a 
-                      href="tel:+917052101786" 
+                  <div className="flex flex-col">
+                    <a
+                      href="tel:+919270418061"
                       className="text-gray-300 hover:text-carolina-blue transition-colors duration-200"
                     >
-                      +91-7052-101-786
+                      +91-92704-18061
+                    </a>
+                    <a
+                      href="tel:+917822030343"
+                      className="text-gray-300 hover:text-carolina-blue transition-colors duration-200"
+                    >
+                      +91-78220-30343
                     </a>
                   </div>
                 </div>
@@ -152,7 +158,7 @@ const Footer = () => {
       
       {/* WhatsApp Icon - Bottom Right */}
       <a 
-        href="https://wa.me/917052101786"
+        href="https://wa.me/919270418061"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-20 right-6 w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-200 hover:scale-110 z-50"
@@ -165,7 +171,7 @@ const Footer = () => {
       
       {/* Phone Icon - Right Side */}
       <a 
-        href="tel:+917052101786"
+        href="tel:+919270418061"
         className="fixed bottom-6 right-6 w-12 h-12 bg-carolina-blue text-white rounded-full flex items-center justify-center shadow-lg hover:bg-royal-blue-light transition-all duration-200 hover:scale-110 z-50"
         aria-label="Call us"
       >

@@ -37,7 +37,7 @@ const About = () => {
           <div className="relative">
             <div className="relative z-10">
               <img
-                src="/assests/dr-chandrama-patil.jpeg"
+                src="/assests/gallery/DSC02873.webp"
                 alt="Dr. Chandrama Patil - Pediatric Dentist"
                 className="w-full h-auto rounded-lg shadow-xl"
                 width="470"
@@ -53,7 +53,7 @@ const About = () => {
             {/* Experience Badge */}
             <div className="absolute top-8 -right-6 bg-white p-4 rounded-lg shadow-lg border border-light-gray">
               <div className="text-center">
-                <div className="text-2xl font-bold text-carolina-blue">15+</div>
+                <div className="text-2xl font-bold text-carolina-blue">5+</div>
                 <div className="text-sm text-sonic-silver">Years Experience</div>
               </div>
             </div>

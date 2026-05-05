@@ -7,20 +7,20 @@ const GalleryPage = () => {
 
   // Gallery photos - curated selection with varied layouts
   const photos = [
-    { id: 1, src: '/assests/gallery/DSC02652.webp', alt: 'Dr. Chandrama Patil at Wonder Smiles', featured: true },
-    { id: 2, src: '/assests/gallery/DSC02683.jpg', alt: 'Advanced dental equipment and technology', featured: true },
-    { id: 3, src: '/assests/gallery/DSC02675.webp', alt: 'Modern dental clinic facility' },
-    { id: 4, src: '/assests/gallery/DSC02681.webp', alt: 'Professional dental care' },
-    { id: 5, src: '/assests/gallery/DSC02777.webp', alt: 'State-of-the-art dental technology' },
-    { id: 6, src: '/assests/gallery/DSC02870.webp', alt: 'Comfortable patient area' },
-    { id: 7, src: '/assests/gallery/DSC02873.webp', alt: 'Professional dental workspace' },
-    { id: 8, src: '/assests/gallery/DSC02876.webp', alt: 'Modern clinic environment' },
-    { id: 9, src: '/assests/gallery/DSC02881.webp', alt: 'Quality dental care facility' },
-    { id: 10, src: '/assests/gallery/DSC02904.webp', alt: 'Wonder Smiles treatment area' },
-    { id: 11, src: '/assests/gallery/DSC02907.webp', alt: 'Expert dental care setup' },
-    { id: 12, src: '/assests/gallery/DSC02930.webp', alt: 'Pediatric dental care' },
-    { id: 13, src: '/assests/gallery/DSC02940.webp', alt: 'Comprehensive dental services' },
-    { id: 14, src: '/assests/gallery/DSC02956.webp', alt: 'Professional dental practice' },
+    { id: 1, src: '/assests/gallery/DSC02652.webp', thumb: '/assests/gallery-thumbs/DSC02652.webp', alt: 'Dr. Chandrama Patil at Wonder Smiles', featured: true },
+    { id: 2, src: '/assests/gallery/DSC02683.webp', thumb: '/assests/gallery-thumbs/DSC02683.webp', alt: 'Advanced dental equipment and technology', featured: true },
+    { id: 3, src: '/assests/gallery/DSC02675.webp', thumb: '/assests/gallery-thumbs/DSC02675.webp', alt: 'Modern dental clinic facility' },
+    { id: 4, src: '/assests/gallery/DSC02681.webp', thumb: '/assests/gallery-thumbs/DSC02681.webp', alt: 'Professional dental care' },
+    { id: 5, src: '/assests/gallery/DSC02777.webp', thumb: '/assests/gallery-thumbs/DSC02777.webp', alt: 'State-of-the-art dental technology' },
+    { id: 6, src: '/assests/gallery/DSC02870.webp', thumb: '/assests/gallery-thumbs/DSC02870.webp', alt: 'Comfortable patient area' },
+    { id: 7, src: '/assests/gallery/DSC02873.webp', thumb: '/assests/gallery-thumbs/DSC02873.webp', alt: 'Professional dental workspace' },
+    { id: 8, src: '/assests/gallery/DSC02876.webp', thumb: '/assests/gallery-thumbs/DSC02876.webp', alt: 'Modern clinic environment' },
+    { id: 9, src: '/assests/gallery/DSC02881.webp', thumb: '/assests/gallery-thumbs/DSC02881.webp', alt: 'Quality dental care facility' },
+    { id: 10, src: '/assests/gallery/DSC02904.webp', thumb: '/assests/gallery-thumbs/DSC02904.webp', alt: 'Wonder Smiles treatment area' },
+    { id: 11, src: '/assests/gallery/DSC02907.webp', thumb: '/assests/gallery-thumbs/DSC02907.webp', alt: 'Expert dental care setup' },
+    { id: 12, src: '/assests/gallery/DSC02930.webp', thumb: '/assests/gallery-thumbs/DSC02930.webp', alt: 'Pediatric dental care' },
+    { id: 13, src: '/assests/gallery/DSC02940.webp', thumb: '/assests/gallery-thumbs/DSC02940.webp', alt: 'Comprehensive dental services' },
+    { id: 14, src: '/assests/gallery/DSC02956.webp', thumb: '/assests/gallery-thumbs/DSC02956.webp', alt: 'Professional dental practice' },
   ];
 
   // Video data - Google Drive video
@@ -29,7 +29,7 @@ const GalleryPage = () => {
       id: 1,
       title: 'Wonder Smiles Clinic Tour',
       driveId: '1pmge1ehdyj76NB5wqjvF1LmJ-N20V8vk',
-      thumbnail: '/assests/gallery/DSC02652.webp'
+      thumbnail: '/assests/gallery-thumbs/DSC02652.webp'
     },
   ];
 
@@ -116,9 +116,12 @@ const GalleryPage = () => {
                   >
                     <div className="aspect-[4/3]">
                       <img
-                        src={photo.src}
+                        src={photo.thumb}
                         alt={photo.alt}
                         loading="lazy"
+                        decoding="async"
+                        width="800"
+                        height="600"
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
@@ -145,9 +148,12 @@ const GalleryPage = () => {
                   >
                     <div className="aspect-square">
                       <img
-                        src={photo.src}
+                        src={photo.thumb}
                         alt={photo.alt}
                         loading="lazy"
+                        decoding="async"
+                        width="800"
+                        height="800"
                         className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-105"
                       />
                     </div>

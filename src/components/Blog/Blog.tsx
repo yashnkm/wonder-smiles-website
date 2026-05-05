@@ -68,7 +68,7 @@ const Blog = () => {
     {
       title: "Advanced Dental Technology at Wonder Smiles: Modern Care in Bavdhan, Pune",
       excerpt: "Discover how Wonder Smiles Dental Clinic combines cutting-edge dental technology with compassionate care. From digital X-rays to modern sterilization systems, learn about the advanced equipment that makes our Bavdhan clinic a leader in dental care for families in Pune and surrounding areas.",
-      image: "/assests/gallery/DSC02683.jpg",
+      image: "/assests/gallery/DSC02683.webp",
       date: "Dec 10, 2024",
       readTime: "5 min read",
       category: "Technology"
@@ -113,10 +113,10 @@ const Blog = () => {
                 Book Appointment
               </a>
               <a
-                href="tel:+917052101786"
+                href="tel:+919270418061"
                 className="border border-carolina-blue text-carolina-blue hover:bg-carolina-blue hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
               >
-                Call: +91 70521 01786
+                Call: +91 92704 18061
               </a>
             </div>
           </div>

@@ -33,7 +33,7 @@ const TestimonialsPage = () => {
       verified: true,
       hasResponse: true,
       category: "Technology",
-      bgImage: "/assests/gallery/DSC02683.jpg"
+      bgImage: "/assests/gallery/DSC02683.webp"
     },
     {
       id: 4,
@@ -43,7 +43,7 @@ const TestimonialsPage = () => {
       review: "Super friendly and down-to-earth dentist. Unlike other clinics that push for expensive treatments, they suggested only what was necessary. Trustworthy place.",
       verified: true,
       category: "Trust & Honesty",
-      bgImage: "/assests/gallery/DSC02705.jpg"
+      bgImage: "/assests/gallery/DSC02705.webp"
     },
     {
       id: 5,
@@ -357,7 +357,7 @@ const TestimonialsPage = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
                 <a
-                  href="tel:+917052101786"
+                  href="tel:+919270418061"
                   className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -366,7 +366,7 @@ const TestimonialsPage = () => {
                   Call Now
                 </a>
                 <a
-                  href="https://wa.me/917052101786"
+                  href="https://wa.me/919270418061"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-4 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"

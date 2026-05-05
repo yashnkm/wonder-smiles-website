@@ -347,7 +347,7 @@ const AboutPage = () => {
                 Book Appointment
               </a>
               <a 
-                href="tel:+917052101786" 
+                href="tel:+919270418061" 
                 className="border border-white hover:bg-white hover:text-oxford-blue-1 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200"
               >
                 Call Now

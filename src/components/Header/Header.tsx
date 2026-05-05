@@ -34,7 +34,7 @@ const Header = () => {
             {/* Logo */}
             <div className="flex items-center">
               <img 
-                src="/assests/logo.png" 
+                src="/assests/logo.webp" 
                 alt="Dr. Chandrama Patil Clinic" 
                 className="h-16 w-auto mr-3"
               />
@@ -80,7 +80,7 @@ const Header = () => {
             {/* CTA Button */}
             <div className="hidden lg:flex items-center">
               <a
-                href="https://wa.me/917052101786?text=Hi%20Wonder%20Smiles,%20I%20would%20like%20to%20book%20an%20appointment"
+                href="https://wa.me/919270418061?text=Hi%20Wonder%20Smiles,%20I%20would%20like%20to%20book%20an%20appointment"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
@@ -156,7 +156,7 @@ const Header = () => {
                     Gallery
                   </button>
                   <a
-                    href="https://wa.me/917052101786?text=Hi%20Wonder%20Smiles,%20I%20would%20like%20to%20book%20an%20appointment"
+                    href="https://wa.me/919270418061?text=Hi%20Wonder%20Smiles,%20I%20would%20like%20to%20book%20an%20appointment"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary w-fit"
