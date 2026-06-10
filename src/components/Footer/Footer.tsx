@@ -128,10 +128,10 @@ const Footer = () => {
                   </div>
                   <div>
                     <a 
-                      href="mailto:info@chandramapatilclinic.com" 
+                      href="mailto:wondersmilesdental@gmail.com" 
                       className="text-gray-300 hover:text-carolina-blue transition-colors duration-200"
                     >
-                      info@chandramapatilclinic.com
+                      wondersmilesdental@gmail.com
                     </a>
                   </div>
                 </div>
