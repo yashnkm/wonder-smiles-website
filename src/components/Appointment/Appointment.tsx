@@ -1,9 +1,16 @@
 import { useState, useMemo } from 'react';
 
+type SubmitState =
+  | { status: 'idle' }
+  | { status: 'submitting' }
+  | { status: 'success' }
+  | { status: 'error'; message: string };
+
 const Appointment = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
+  const [submitState, setSubmitState] = useState<SubmitState>({ status: 'idle' });
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -91,10 +98,66 @@ const Appointment = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    alert('Appointment request submitted! We will contact you regarding date availability and confirm your appointment.');
+
+    const accessKey = import.meta.env.VITE_WEB3FORMS_KEY as string | undefined;
+    if (!accessKey) {
+      setSubmitState({ status: 'error', message: 'Booking is not configured yet. Please call us directly.' });
+      return;
+    }
+
+    if (!selectedDate || !selectedTime) {
+      setSubmitState({ status: 'error', message: 'Please pick a preferred date and time.' });
+      return;
+    }
+
+    setSubmitState({ status: 'submitting' });
+
+    const form = e.currentTarget;
+    if ((form.elements.namedItem('botcheck') as HTMLInputElement)?.value) {
+      setSubmitState({ status: 'success' });
+      return;
+    }
+
+    const dateStr = selectedDate.toLocaleDateString('en-IN', {
+      weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+    });
+
+    const payload = {
+      access_key: accessKey,
+      subject: `New appointment request — ${formData.name} (${dateStr}, ${selectedTime})`,
+      from_name: 'Wonder Smiles Website',
+      name: formData.name,
+      phone: formData.phone,
+      email: formData.email,
+      service: formData.service,
+      preferred_date: dateStr,
+      preferred_time: selectedTime,
+      notes: formData.message,
+      replyto: formData.email,
+    };
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.success) {
+        throw new Error(data.message || 'Submission failed');
+      }
+      setSubmitState({ status: 'success' });
+      setFormData({ name: '', phone: '', email: '', service: '', message: '' });
+      setSelectedDate(null);
+      setSelectedTime(null);
+    } catch (err) {
+      setSubmitState({
+        status: 'error',
+        message: err instanceof Error ? err.message : 'Something went wrong. Please call us instead.',
+      });
+    }
   };
 
   return (
@@ -288,16 +351,18 @@ const Appointment = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-oxford-blue-1 mb-2">Email Address</label>
+                  <label className="block text-sm font-medium text-oxford-blue-1 mb-2">Email Address *</label>
                   <input
                     type="email"
                     name="email"
+                    required
                     value={formData.email}
                     onChange={handleInputChange}
                     className="w-full p-4 border border-light-gray rounded-xl focus:border-carolina-blue focus:ring-2 focus:ring-carolina-blue/20 transition-all duration-200"
                     placeholder="your.email@example.com"
                   />
                 </div>
+                <input type="checkbox" name="botcheck" style={{display: 'none'}} tabIndex={-1} autoComplete="off" />
 
                 <div>
                   <label className="block text-sm font-medium text-oxford-blue-1 mb-2">Type of Service *</label>
@@ -339,14 +404,38 @@ const Appointment = () => {
                   </div>
                 </div>
 
+                {submitState.status === 'success' && (
+                  <div className="bg-green-50 border border-green-200 text-green-800 rounded-xl p-4 text-sm">
+                    Your request has been sent. We'll call or email you within 24 hours to confirm.
+                  </div>
+                )}
+                {submitState.status === 'error' && (
+                  <div className="bg-red-50 border border-red-200 text-red-800 rounded-xl p-4 text-sm">
+                    {submitState.message} You can also call us at <a className="font-semibold underline" href="tel:+919270418061">+91 92704 18061</a>.
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-carolina-blue to-royal-blue-light text-white font-semibold py-4 px-6 rounded-xl hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2"
+                  disabled={submitState.status === 'submitting'}
+                  className="w-full bg-gradient-to-r from-carolina-blue to-royal-blue-light text-white font-semibold py-4 px-6 rounded-xl hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  Request Appointment
+                  {submitState.status === 'submitting' ? (
+                    <>
+                      <svg className="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
+                      </svg>
+                      Sending…
+                    </>
+                  ) : (
+                    <>
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                      Request Appointment
+                    </>
+                  )}
                 </button>
               </form>
             </div>

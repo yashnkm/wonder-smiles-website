@@ -6,6 +6,8 @@ const AboutPage = lazy(() => import('../pages/AboutPage'));
 const ServicesPage = lazy(() => import('../pages/ServicesPage'));
 const GalleryPage = lazy(() => import('../pages/GalleryPage'));
 const TestimonialsPage = lazy(() => import('../pages/TestimonialsPage'));
+const BlogPage = lazy(() => import('../pages/BlogPage'));
+const BlogPostPage = lazy(() => import('../pages/BlogPostPage'));
 
 const Router = () => {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -32,6 +34,11 @@ const Router = () => {
 
   // Route rendering logic
   const renderPage = () => {
+    const blogMatch = currentPath.match(/^\/blog\/([^/]+)\/?$/);
+    if (blogMatch) {
+      return <BlogPostPage slug={decodeURIComponent(blogMatch[1])} />;
+    }
+
     switch (currentPath) {
       case '/about':
         return <AboutPage />;
@@ -41,6 +48,8 @@ const Router = () => {
         return <GalleryPage />;
       case '/testimonials':
         return <TestimonialsPage />;
+      case '/blog':
+        return <BlogPage />;
       case '/':
       default:
         return <HomePage />;

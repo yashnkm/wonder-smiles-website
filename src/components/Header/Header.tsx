@@ -75,6 +75,12 @@ const Header = () => {
               >
                 Gallery
               </button>
+              <button
+                onClick={() => handleNavigation('/blog')}
+                className="text-oxford-blue-1 hover:text-carolina-blue font-medium transition-colors duration-200"
+              >
+                Blog
+              </button>
             </nav>
 
             {/* CTA Button */}
@@ -154,6 +160,12 @@ const Header = () => {
                     className="text-oxford-blue-1 hover:text-carolina-blue font-medium transition-colors text-left"
                   >
                     Gallery
+                  </button>
+                  <button
+                    onClick={() => handleNavigation('/blog')}
+                    className="text-oxford-blue-1 hover:text-carolina-blue font-medium transition-colors text-left"
+                  >
+                    Blog
                   </button>
                   <a
                     href="https://wa.me/919270418061?text=Hi%20Wonder%20Smiles,%20I%20would%20like%20to%20book%20an%20appointment"

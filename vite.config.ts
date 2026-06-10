@@ -24,8 +24,8 @@ export default defineConfig({
         ]
       },
       workbox: {
-        maximumFileSizeToCacheInBytes: 25 * 1024 * 1024, // 25MB limit
-        globPatterns: ['**/*.{js,css,html,ico,png,jpg,jpeg,webp,svg}'],
+        maximumFileSizeToCacheInBytes: 3 * 1024 * 1024,
+        globPatterns: ['**/*.{js,css,html,ico,svg,webmanifest}'],
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
@@ -67,17 +67,18 @@ export default defineConfig({
     cssCodeSplit: true,
     rollupOptions: {
       output: {
-        // Create separate chunks for vendor libraries
         manualChunks(id) {
-          if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'react-vendor';
-            }
-            if (id.includes('motion')) {
-              return 'motion-vendor';
-            }
-            return 'vendor';
+          if (!id.includes('node_modules')) return;
+          if (id.includes('/node_modules/react/') || id.includes('/node_modules/react-dom/') || id.includes('/node_modules/scheduler/')) {
+            return 'react-vendor';
           }
+          if (id.includes('/node_modules/motion') || id.includes('/node_modules/framer-motion')) {
+            return 'motion-vendor';
+          }
+          if (id.includes('/node_modules/@sanity/') || id.includes('/node_modules/@portabletext/')) {
+            return 'sanity-vendor';
+          }
+          return 'vendor';
         },
         // Add cache-busting file names
         chunkFileNames: 'assets/js/[name]-[hash].js',
